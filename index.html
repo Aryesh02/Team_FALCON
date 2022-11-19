@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Animal Suvidha</title>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+<script src="https://cdn.maptiler.com/maplibre-gl-js/v2.4.0/maplibre-gl.js"></script>
+<link href="https://cdn.maptiler.com/maplibre-gl-js/v2.4.0/maplibre-gl.css" rel="stylesheet" />
+</head>
+<style>
+
+#navbar {
+    flex-direction: column;
+}
+
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+:root{
+    --navbar-height: 59px;
+}
+/* Home section */
+
+#contact-box form{
+    width:80%;
+}
+.h-primary{
+    font-size:26px;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --navbar-height: 59px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#logo img{
+    height: 79px;
+    margin: 3px 3px;
+}
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    font-size: 25px;
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#home{
+
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('fox.jpg') no-repeat center center/cover;
+    height: 842px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+#home h1{
+    font-size: 70px;
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    font-size: 13px;
+}
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('contact.jpg') no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 35%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(194, 53, 53);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+    margin-left: 700px;
+    margin-top: 40px;
+}
+.button{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(165, 52, 52);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+#service label{
+    padding: 10px;
+    border: 2px solid rgb(143, 79, 79);
+    font-size: 25px;
+    margin: 34px;
+    flex-direction: column;
+}
+#service.box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#service.box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+#about-us{
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    margin: 50px;
+    line-height: 2;
+    background-color: rgb(236, 213, 213);
+}
+#about-us h2{
+    font-size: 30px;
+}
+#service{
+
+    border: 2px solid grey;
+    padding: 20px;
+    margin: 30px;
+    background-color: beige;
+    height: 1000px;
+}
+#injury , #animal{
+    padding: 30px;
+    font-size: 30px;
+    margin: 40px;
+    background-color: rgb(222, 231, 177);
+}
+#injury{
+    margin-left: 60px;
+}
+
+#map {
+      position: absolute;
+      width: 80%;
+      height: 500px;
+      margin-top: 20px;
+      margin-left: 110px;
+      margin-right: 20px;
+      border: 2px solid black;
+    }
+
+.top
+{
+    margin: 0px;
+}
+</style>
+<body>
+<nav id="navbar">
+<div id="logo">
+<img src="Logo.jpeg" alt="falcon team">
+</div>
+<ul>
+<li class="item"><a href="#home">Home</a></li>
+<li class="item"><a href="#about-us ">About us</a></li>
+<li class="item"><a href="#service">Service</a></li>
+<li class="item"><a href="#contact">Contact Us</a></li>
+</ul>
+</nav>
+
+<section id="home">
+    <img src="Fox.jpeg" alt="" class="top">
+<h1 class="h-primary">Welcome to Animal Suvidha</h1>
+</section>
+<br><br><br><br>
+<section id="about-us">
+<h1 class="h-primary">Animal Suvidha - A help for innocents</h1>
+<div>
+<h2 id="about">
+                We are living in a rapid-moving world, where an injured person hardly has a chance to get help. And that too, when people know whom to call. In such a scenario, if it were an animal, people generally have no idea whom to call and how to help, which furthermore increases the chances of that animal dying.  Hence, with this project, we have a vision to make the process of helping animals, frictionless. With this, we would be able to save lives of countless animal. In the future, we would make the application easier by detecting the type of animal and its injury simply by showing the camera towards our injured animal. This would hence make the process effortless, so that more and more people are willing to help the injured animal.
+</h2>
+</div>
+</section>
+<br><br><br><br><br>
+<section id="service">
+<h1 class="h-primary">Report an Enquiry</h1>
+<br><br><br>
+<select id="animal">
+<option value="Type of Animal">Type of Animal</option>
+<option value="Deer">Deer</option>
+<option value="Cow">Cow</option>
+<option value="Buffalo">Buffalo</option>
+<option value="Dog">Dog</option>
+<option value="Goat">Goat</option>
+<option value="Fox">Fox</option>
+<option value="Cat">cat</option>
+<option value="leopard">Leopard</option>
+<option value="Tiger">Tiger</option>
+</select>
+
+<select id="injury">
+<option value="Type of Injury">Type of Injury</option>
+<option value="Minor injury">Minor injury</option>
+<option value="Head injury">Head injury</option>
+<option value="Bone Fracture">Bone Fracture</option>
+<option value="Burns">Burns</option>
+<option value="Strain/Sprain">Strain/Sprain</option>
+</select>
+
+
+<br><br>
+
+<div id="map"></div>
+  <script>
+  function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function showPosition(position) {
+  var Lat = position.coords.latitude;
+  var Lon = position.coords.longitude;
+  const key = 'o1uZ3ElfCrBOUMeRUdPx';
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${key}`, // style URL
+        center: [Lon, Lat], // starting position [lng, lat]
+        zoom: 8.5, // starting zoom
+      });
+      map.addControl(new maplibregl.NavigationControl(), 'top-right');
+      const marker = new maplibregl.Marker()
+            .setLngLat([Lon, Lat])
+            .addTo(map); 
+        map.on('error', function(err) {
+            throw new Error("To load the map, you must replace YOUR_MAPTILER_API_KEY_HERE first, see README");
+        });
+}
+
+
+    getLocation();
+  </script>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <button class="btn">Submit</button>
+</section>
+<br><br><br><br><br>
+
+
+<footer>
+<div class="center">
+    Copyright &copy; www.AnimalSuvidha.com. All rights reserved!
+</div>
+</footer>
+</body>
+
+</html>
